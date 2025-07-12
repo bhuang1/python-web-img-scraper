@@ -66,13 +66,13 @@ def scrape_images(url):
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
-        print("Usage: python scraper.py <URL>")
+        print("Usage: uv run python scraper.py <URL>")
     else:
         try:
             from webdriver_manager.firefox import GeckoDriverManager
         except ImportError:
             print("webdriver-manager is not installed. Please run:")
-            print("pip install webdriver-manager")
+            print("uv pip install webdriver-manager")
             sys.exit(1)
 
         scrape_images(sys.argv[1])
